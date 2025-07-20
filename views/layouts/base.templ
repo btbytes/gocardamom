@@ -1,8 +1,8 @@
 package layouts
 
 import (
-	"github.com/guillembonet/go-templ-htmx/views"
-	"github.com/guillembonet/go-templ-htmx/views/components"
+	"github.com/btbytes/gocardamom/views"
+	"github.com/btbytes/gocardamom/views/components"
 )
 
 const (
@@ -36,7 +36,7 @@ templ Base(title, description string) {
 					if (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches) {
 						theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'light' : 'dark'
 					}
-					
+
 					localStorage.theme = theme
 					document.documentElement.classList.toggle('dark', theme === 'dark')
 				}

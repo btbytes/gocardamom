@@ -10,8 +10,8 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/guillembonet/go-templ-htmx/server"
-	"github.com/guillembonet/go-templ-htmx/server/handlers"
+	"github.com/btbytes/gocardamom/server"
+	"github.com/btbytes/gocardamom/server/handlers"
 )
 
 var (

@@ -5,7 +5,7 @@ import (
 
 	"github.com/a-h/templ"
 	"github.com/gin-gonic/gin"
-	"github.com/guillembonet/go-templ-htmx/views/layouts"
+	"github.com/btbytes/gocardamom/views/layouts"
 )
 
 const (

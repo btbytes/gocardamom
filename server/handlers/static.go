@@ -4,8 +4,8 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/guillembonet/go-templ-htmx/server"
-	"github.com/guillembonet/go-templ-htmx/views/home"
+	"github.com/btbytes/gocardamom/server"
+	"github.com/btbytes/gocardamom/views/home"
 )
 
 type Static struct {

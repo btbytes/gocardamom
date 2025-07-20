@@ -7,9 +7,9 @@ import (
 
 	"github.com/gin-contrib/gzip"
 	"github.com/gin-gonic/gin"
-	"github.com/guillembonet/go-templ-htmx/server/middleware"
-	"github.com/guillembonet/go-templ-htmx/views/assets"
-	"github.com/guillembonet/go-templ-htmx/views/error_pages"
+	"github.com/btbytes/gocardamom/server/middleware"
+	"github.com/btbytes/gocardamom/views/assets"
+	"github.com/btbytes/gocardamom/views/error_pages"
 )
 
 type Server struct {

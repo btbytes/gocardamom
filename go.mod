@@ -1,4 +1,4 @@
-module github.com/guillembonet/go-templ-htmx
+module github.com/btbytes/gocardamom
 
 go 1.24
 
