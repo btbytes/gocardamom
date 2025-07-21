@@ -3,7 +3,7 @@
 create table if not exists entry (
 id integer primary key autoincrement,
 parent_id integer references entries (id) null,
--- type of content (note, article, blogmark, comment)
+-- type of content (note, article, blogmark, comment, quotation)
 content_type text default 'note',
 title text,
 content text not null,
@@ -20,14 +20,17 @@ via_notes text default 'via',
 format text default 'markdown',
 status text default 'draft', -- status of the entry
 metadata json default '{}',
-category text default '',
 photo_url text default '',
 photo_caption text,
 private_notes text,
-slug text not null,
+shortcode text unique,
 cssclasses text default ''
 ) ;
-create index entry_category_idx on entry (category) ;
+
+-- content-type: quotation
+-- content = quotation
+-- source = via_notes
+-- source_url = via_url
 
 CREATE VIRTUAL TABLE fts_entry USING FTS5 (title, content) ;
 
@@ -103,6 +106,8 @@ drop table if exists entry_category ;
 drop table if exists entry_tag ;
 drop table if exists series_entry ;
 drop table if exists series ;
+drop table if exists tag ;
+drop table if exists category ;
 drop table if exists entry ;
 drop table if exists datalog ;
 -- +goose StatementEnd
